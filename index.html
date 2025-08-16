@@ -1,0 +1,188 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyPersonalWebsite</title>
+  <!-- Tailwind Play CDN for quick prototyping -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles */
+    html { scroll-behavior: smooth; }
+    .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-neutral-900 text-gray-200 min-h-screen font-sans">
+  <!-- NAV -->
+  <header class="fixed w-full z-30 top-0">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between glass border-b border-neutral-800">
+      <a href="#home" class="text-xl font-semibold">My Personal Website</a>
+      <ul class="hidden md:flex gap-6 items-center">
+        <li><a href="#home" class="hover:text-white">Home</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#services" class="hover:text-white">Services</a></li>
+        <li><a href="#gallery" class="hover:text-white">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="toggle menu" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          <svg id="menuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="menuClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-neutral-900/80 border-t border-neutral-800">
+      <ul class="flex flex-col px-4 py-3 gap-3">
+        <li><a href="#home" class="block">Home</a></li>
+        <li><a href="#about" class="block">About</a></li>
+        <li><a href="#services" class="block">Services</a></li>
+        <li><a href="#gallery" class="block">Gallery</a></li>
+        <li><a href="#contact" class="block">Contact</a></li>
+      </ul>
+    </div>
+  </header>  <main class="pt-24">
+    <!-- SECTION 1: HOME (Hero) -->
+    <section id="home" class="min-h-[70vh] flex items-center">
+      <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Welcome to my website</h1>
+          <p class="mt-4 text-neutral-300">Hello — this is my personal <span class="text-indigo-400 font-semibold">WEBSITE</span>. My goal is to become a successful programmer and a website designer.
+
+ </p>
+          <div class="mt-6 flex gap-3">
+            <a href="#contact" class="px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg">Contact</a>
+            <a href="#gallery" class="px-5 py-2 rounded-lg border border-neutral-700 hover:border-neutral-600">View Gallery</a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <!-- simple visual card -->
+          <div class="rounded-2xl p-6 glass border border-neutral-800">
+            <h3 class="text-lg font-semibold">Quick Info</h3>
+            <p class="mt-2 text-neutral-300">A responsive 5-section layout: Home, About, Services, Gallery, Contact. Dark mode by default. Tailwind for styling.</p>
+            <ul class="mt-4 space-y-2 text-sm text-neutral-400">
+              <li>Responsive nav</li>
+              <li>Smooth scroll</li>
+              <li>Accessible semantics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- SECTION 2: ABOUT -->
+<section id="about" class="py-16 border-t border-neutral-800">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold">About</h2>
+    <p class="mt-4 text-neutral-300"></p>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="p-4 glass rounded-lg">
+        <h4 class="font-semibold">Mission</h4>
+        <p class="text-sm text-neutral-300 mt-2">Create simple, usable web experiences.</p>
+      </div>
+      <div class="p-4 glass rounded-lg">
+        <h4 class="font-semibold">Vision</h4>
+        <p class="text-sm text-neutral-300 mt-2">Learning and sharing web design ideas.</p>
+      </div>
+      <div class="p-4 glass rounded-lg">
+        <h4 class="font-semibold">Values</h4>
+        <p class="text-sm text-neutral-300 mt-2">Clarity · Accessibility · Performance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: SERVICES -->
+<section id="services" class="py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold">PT 1-6</h2>
+    <p class="mt-4 text-neutral-300">This is all the PETAs given by the teacher.
+
+</p>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="p-6 glass rounded-lg">
+        <h3 class="text-xl font-semibold">Performance Task 1</h3>
+        <p class="mt-2 text-neutral-300 text-sm"></p>
+      </article>
+      <article class="p-6 glass rounded-lg">
+        <h3 class="text-xl font-semibold">Performance Task 2</h3>
+        <p class="mt-2 text-neutral-300 text-sm"></p>
+      </article>
+      <article class="p-6 glass rounded-lg">
+        <h3 class="text-xl font-semibold">Performance task 3 </h3>
+        <p class="mt-2 text-neutral-300 text-sm"></p>
+      </article>
+       <article class="p-6 glass rounded-lg">
+        <h3 class="text-xl font-semibold">Performance Task 4</h3>
+        <p class="mt-2 text-neutral-300 text-sm"></p>
+      </article>
+       <article class="p-6 glass rounded-lg">
+        <h3 class="text-xl font-semibold">Peroformance Task 5</h3>
+        <p class="mt-2 text-neutral-300 text-sm"></p>
+      </article>
+       <article class="p-6 glass rounded-lg">
+        <h3 class="text-xl font-semibold">Performance Task 6</h3>
+        <p class="mt-2 text-neutral-300 text-sm"></p>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: GALLERY -->
+<section id="gallery" class="py-16 border-t border-neutral-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold">Gallery</h2>
+    <p class="mt-4 text-neutral-300">This is Rodnie's gallery</p>
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="wews.webp" alt="sample"class="w-full h-40 object-cover rounded-lg shadow-sm">
+      <img src="rodnie.webp" alt="sample" class="w-full h-40 object-cover rounded-lg shadow-sm">
+      <img src="aw.jpg" alt="sample" class="w-full h-40 object-cover rounded-lg shadow-sm">
+      <img src="baby.jpg" alt="sample" class="w-full h-40 object-cover rounded-lg shadow-sm">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: CONTACT -->
+<section id="contact" class="py-16">
+  <div class="max-w-3xl mx-auto px-6">
+    <h2 class="text-3xl font-bold">Contact</h2>
+    <p class="mt-4 text-neutral-300">If you need me, just call me <a href="rodnieespeso075@gmail.com" class="text-indigo-400">rodnieespeso075@gmail.com</a>.</p>
+    <form class="mt-6 grid gap-4">
+      <input type="text" placeholder="Your name" class="w-full p-3 rounded-md bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <input type="email" placeholder="Email" class="w-full p-3 rounded-md bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      <textarea rows="5" placeholder="Message" class="w-full p-3 rounded-md bg-neutral-800 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+      <div class="flex justify-end">
+        <button type="submit" class="px-5 py-2 rounded-md bg-indigo-600 hover:bg-indigo-500 text-white">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-8 border-t border-neutral-800 mt-8">
+  <div class="max-w-6xl mx-auto px-6 text-center text-sm text-neutral-500"></span></div>
+</footer>
+
+  </main>  <script>
+    // mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuOpen.classList.toggle('hidden');
+      menuClose.classList.toggle('hidden');
+    });
+
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // close mobile menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+  </script></body>
+</html>
